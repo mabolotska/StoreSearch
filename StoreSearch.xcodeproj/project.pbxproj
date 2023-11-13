@@ -13,6 +13,10 @@
 		D000DA4C2AEFCB380035A443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D000DA4A2AEFCB380035A443 /* Main.storyboard */; };
 		D000DA4E2AEFCB3A0035A443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D000DA4D2AEFCB3A0035A443 /* Assets.xcassets */; };
 		D000DA512AEFCB3A0035A443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D000DA4F2AEFCB3A0035A443 /* LaunchScreen.storyboard */; };
+		D000DAE12AF8CC170035A443 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000DAE02AF8CC160035A443 /* SearchResult.swift */; };
+		D0FCC4962AFA980200E9DA84 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FCC4952AFA980200E9DA84 /* SearchResultCell.xib */; };
+		D0FCC49C2AFD15A900E9DA84 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCC49B2AFD15A900E9DA84 /* SearchResultCell.swift */; };
+		D0FCC4E92B00D23B00E9DA84 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FCC4E82B00D23B00E9DA84 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		D000DA4D2AEFCB3A0035A443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D000DA502AEFCB3A0035A443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D000DA522AEFCB3A0035A443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D000DAE02AF8CC160035A443 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		D0FCC4952AFA980200E9DA84 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		D0FCC49B2AFD15A900E9DA84 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		D0FCC4E82B00D23B00E9DA84 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				D000DA442AEFCB380035A443 /* AppDelegate.swift */,
+				D0FCC4952AFA980200E9DA84 /* SearchResultCell.xib */,
 				D000DA462AEFCB380035A443 /* SceneDelegate.swift */,
 				D000DA482AEFCB380035A443 /* SearchViewController.swift */,
+				D000DAE02AF8CC160035A443 /* SearchResult.swift */,
+				D0FCC49B2AFD15A900E9DA84 /* SearchResultCell.swift */,
 				D000DA4A2AEFCB380035A443 /* Main.storyboard */,
 				D000DA4D2AEFCB3A0035A443 /* Assets.xcassets */,
 				D000DA4F2AEFCB3A0035A443 /* LaunchScreen.storyboard */,
 				D000DA522AEFCB3A0035A443 /* Info.plist */,
+				D0FCC4E82B00D23B00E9DA84 /* NothingFoundCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -126,7 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D000DA512AEFCB3A0035A443 /* LaunchScreen.storyboard in Resources */,
+				D0FCC4962AFA980200E9DA84 /* SearchResultCell.xib in Resources */,
 				D000DA4E2AEFCB3A0035A443 /* Assets.xcassets in Resources */,
+				D0FCC4E92B00D23B00E9DA84 /* NothingFoundCell.xib in Resources */,
 				D000DA4C2AEFCB380035A443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +154,9 @@
 			files = (
 				D000DA492AEFCB380035A443 /* SearchViewController.swift in Sources */,
 				D000DA452AEFCB380035A443 /* AppDelegate.swift in Sources */,
+				D000DAE12AF8CC170035A443 /* SearchResult.swift in Sources */,
 				D000DA472AEFCB380035A443 /* SceneDelegate.swift in Sources */,
+				D0FCC49C2AFD15A900E9DA84 /* SearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
