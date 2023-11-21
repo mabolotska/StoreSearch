@@ -96,8 +96,7 @@ extension SearchViewController: UISearchBarDelegate {
         print("URL: '\(url)'")
           
           if let data = performStoreRequest(with: url) { // Modified
-                let results = parse(data: data)               // New line
-                print("Got results: \(results)")
+              searchResults = parse(data: data)
           }
         tableView.reloadData()
       }
@@ -134,9 +133,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                     TableView.CellIdentifiers.nothingFoundCell,
                 for: indexPath)
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier:
-                                                        TableView.CellIdentifiers.searchResultCell,
-                                                     for: indexPath) as! SearchResultCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
             let searchResult = searchResults[indexPath.row]
             cell.nameLabel.text = searchResult.name
             cell.artistNameLabel.text = searchResult.artistName
@@ -144,23 +141,27 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+//    if searchResult.artist.isEmpty {
+//      cell.artistNameLabel.text = "Unknown"
+//    } else {
+//      cell.artistNameLabel.text = String(
+//        format: "%@ (%@)",
+//        searchResult.artist,
+//        searchResult.type)
+//    }
+    
     func position(for bar: UIBarPositioning) -> UIBarPosition {
       return .topAttached
     }
     
-    func tableView(
-      _ tableView: UITableView,
-      didSelectRowAt indexPath: IndexPath
-    ){
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         tableView.deselectRow(at: indexPath, animated: true)
       }
-      func tableView(
-        _ tableView: UITableView,
-        willSelectRowAt indexPath: IndexPath
-      ) -> IndexPath? {
+      func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if searchResults.count == 0 {
           return nil
-        } else {
+        } 
+          else {
           return indexPath
         }
       }
