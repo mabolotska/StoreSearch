@@ -9,11 +9,6 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    
-    
-    
-    
-    
     var searchResults = [SearchResult]()
     var hasSearched = false
     
@@ -44,8 +39,7 @@ class SearchViewController: UIViewController {
     func iTunesURL(searchText: String) -> URL {
         let encodedText = searchText.addingPercentEncoding(
             withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(
-            format: "https://itunes.apple.com/search?term=%@",encodedText)
+        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200", encodedText)
         let url = URL(string: urlString)
         return url!
     }
@@ -98,6 +92,10 @@ extension SearchViewController: UISearchBarDelegate {
           if let data = performStoreRequest(with: url) { // Modified
               searchResults = parse(data: data)
           }
+          
+          searchResults.sort { $0 < $1 }
+          
+          
         tableView.reloadData()
       }
     }
